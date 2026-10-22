@@ -1,0 +1,30 @@
+{
+  "name": "evmetrik-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Marketing website for Evmetrik - shared EV software and analytics for small and emerging electric two-wheeler manufacturers in India.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "smtp:stub": "node scripts/smtp-stub.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "nodemailer": "^6.9.14",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/nodemailer": "^6.4.14",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.35",
+    "typescript": "5.5.4"
+  }
+}

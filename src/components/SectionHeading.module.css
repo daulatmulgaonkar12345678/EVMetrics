@@ -1,0 +1,4 @@
+.head { max-width: 62ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.center { margin-inline: auto; text-align: center; }
+.center .lede { margin-inline: auto; }
+.center :global(.eyebrow) { justify-content: center; }

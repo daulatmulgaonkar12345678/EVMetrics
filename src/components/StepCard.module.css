@@ -1,0 +1,19 @@
+.step {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.012));
+  padding: 1.4rem 1.3rem;
+  height: 100%;
+}
+.marker {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; height: 26px; padding: 0 0.6rem;
+  font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em;
+  color: var(--cyan); background: rgba(53, 208, 230, 0.1);
+  border: 1px solid rgba(53, 208, 230, 0.26); border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+.title { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.summary { color: var(--text); font-size: 0.94rem; font-weight: 500; margin-bottom: 0.5rem; }
+.detail { color: var(--text-dim); font-size: 0.88rem; }

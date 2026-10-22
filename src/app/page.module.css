@@ -1,0 +1,26 @@
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.stepsNote { margin-top: 1.5rem; color: var(--text-dim); font-size: 0.88rem; max-width: 70ch; }
+
+.honesty {
+  display: grid; gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: 1fr 1fr; align-items: start;
+}
+.honestyList { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.8rem; }
+.honestyList li {
+  position: relative; padding: 0.95rem 1.1rem 0.95rem 2.6rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: rgba(255,255,255,0.025); color: var(--text-soft); font-size: 0.93rem;
+}
+.honestyList li::before {
+  content: "✓"; position: absolute; left: 1rem; top: 0.95rem;
+  color: var(--green); font-weight: 700;
+}
+
+.next {
+  display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem;
+  align-items: center; justify-content: space-between;
+}
+
+@media (max-width: 860px) {
+  .honesty { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,15 @@
+.wrap {
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(700px 300px at 85% 0%, rgba(124, 227, 139, 0.12), transparent 65%),
+    radial-gradient(600px 300px at 10% 100%, rgba(53, 208, 230, 0.14), transparent 65%),
+    rgba(9, 16, 28, 0.8);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+.inner {
+  display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem;
+  align-items: center; justify-content: space-between;
+}
+.title { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); margin-bottom: 0.4rem; }
+.body { color: var(--text-soft); max-width: 56ch; margin: 0; }
+.actions { flex: none; }
