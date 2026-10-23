@@ -172,6 +172,9 @@ export default function HomePage() {
             <ButtonLink href="/partner/" variant="ghost">
               Partner With Us
             </ButtonLink>
+            <ButtonLink href="/demo/" variant="ghost">
+              Open the product demo
+            </ButtonLink>
           </div>
         </div>
       </section>

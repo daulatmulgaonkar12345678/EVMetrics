@@ -4,6 +4,7 @@ import { FeatureCard } from '@/components/FeatureCard';
 import { ArchitectureDiagram } from '@/components/ArchitectureDiagram';
 import { SampleDashboard } from '@/components/SampleDashboard';
 import { CtaBanner } from '@/components/CtaBanner';
+import { ButtonLink } from '@/components/Button';
 import { FEATURES } from '@/data/features';
 import styles from './page.module.css';
 
@@ -159,6 +160,12 @@ export default function PlatformPage() {
             lede="The mock-up below shows the intended information architecture: fleet KPIs, energy and charging views, a model table and a service-event queue. All of it runs on clearly labelled fictional sample data."
           />
           <SampleDashboard />
+          <div className="btnRow" style={{ marginTop: '1.5rem' }}>
+            <ButtonLink href="/demo/">Open the interactive demo</ButtonLink>
+            <ButtonLink href="/partner/" variant="ghost">
+              Become a Pilot Partner
+            </ButtonLink>
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,224 @@
+.root {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: left;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #f5c26b;
+  border: 1px solid rgba(245, 194, 107, 0.35);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  background: rgba(245, 194, 107, 0.08);
+}
+
+.previewTitle {
+  font-size: clamp(1.55rem, 1.2rem + 1.6vw, 2.35rem);
+  letter-spacing: -0.02em;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.previewLede {
+  color: var(--text-soft);
+  font-size: clamp(1rem, 0.97rem + 0.25vw, 1.13rem);
+  max-width: 60ch;
+  margin: 0;
+}
+
+.tablistWrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  -webkit-overflow-scrolling: touch;
+}
+
+.tablist {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.tab:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.tab:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.tabActive {
+  color: #04202a;
+  background: linear-gradient(135deg, #35d0e6 0%, #1c9fb9 100%);
+  border-color: transparent;
+}
+
+.panels {
+  display: grid;
+  gap: 0;
+}
+
+.panel {
+  animation: none;
+}
+
+@keyframes panelFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.viewBody {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  grid-template-columns: 1fr;
+}
+
+.kpis {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.kpiCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  background: linear-gradient(180deg, rgba(17, 29, 49, 0.6), rgba(9, 15, 26, 0.6));
+}
+
+.kpiLabel {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 0 0 0.35rem;
+}
+
+.kpiValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 0.2rem;
+}
+
+.kpiNote {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.chartWrap {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.chartCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  background: linear-gradient(180deg, rgba(17, 29, 49, 0.6), rgba(9, 15, 26, 0.6));
+  display: flex;
+  flex-direction: column;
+}
+
+.chartCardSquare {
+  /* square-ish card for donut / small charts */
+}
+
+.chartHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.chartHead h4 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.chartNote {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.chartSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.chartFoot {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.viewNote {
+  color: var(--text-soft);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  max-width: 62ch;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .viewBody {
+    grid-template-columns: 1fr 320px;
+  }
+  .kpis {
+    grid-column: 1 / -1;
+  }
+  .chartWrap {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tab {
+    font-size: 0.86rem;
+    padding: 0.5rem 0.85rem;
+  }
+  .kpis {
+    grid-template-columns: 1fr 1fr;
+  }
+}

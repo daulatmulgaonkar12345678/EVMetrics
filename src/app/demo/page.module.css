@@ -1,0 +1,370 @@
+/* Product demo page ------------------------------------------------- */
+
+.hero {
+  position: relative;
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.2rem, 4vw, 3.2rem);
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -20% 40% 40% -10%;
+  background: radial-gradient(50% 50% at 30% 30%, rgba(53, 208, 230, 0.16), transparent 70%);
+  pointer-events: none;
+}
+
+.heroInner { position: relative; max-width: 860px; }
+
+.heroTitle {
+  margin: 0.6rem 0 1rem;
+  font-size: clamp(2rem, 4.6vw, 3.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.heroLede {
+  margin: 0;
+  max-width: 66ch;
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+}
+
+.heroNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 1.5rem 0 0;
+  max-width: 62ch;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.heroNote span[aria-hidden] {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 3px rgba(245, 194, 107, 0.15);
+}
+
+.dashNote {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* Honesty --------------------------------------------------------- */
+.honestyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.honestyCard {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(148, 180, 214, 0.035);
+}
+
+.honestyCard h3 {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.honestyCard ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.honestyCard li {
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.honestyCard li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.honestyCard[data-tone='no'] li::before { background: var(--amber); }
+
+/* Mobile preview -------------------------------------------------- */
+.previewGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.previewCopy p {
+  margin: 0 0 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+  max-width: 54ch;
+}
+
+.previewCaption {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.phone {
+  width: 100%;
+  max-width: 300px;
+  margin-inline: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 30px;
+  background: linear-gradient(180deg, #0b1320, #060b14);
+  padding: 0.55rem;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+}
+
+.phoneScreen {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(6, 11, 20, 0.86);
+  overflow: hidden;
+}
+
+.phoneBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.phoneBar strong { color: var(--text); font-weight: 700; letter-spacing: 0.02em; text-transform: none; font-size: 0.68rem; }
+
+.phoneBody { display: grid; gap: 0.6rem; padding: 0.7rem; }
+
+.phoneKpiRow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.45rem; }
+
+.phoneKpi {
+  padding: 0.5rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(148, 180, 214, 0.05);
+}
+
+.phoneKpi span {
+  display: block;
+  font-size: 0.55rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.phoneKpi strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.phoneChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 62px;
+  padding: 0.5rem 0.55rem 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(148, 180, 214, 0.035);
+}
+
+.phoneChart i {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  background: linear-gradient(180deg, var(--cyan), rgba(53, 208, 230, 0.25));
+}
+
+.phoneRows { display: grid; gap: 0.35rem; }
+
+.phoneRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.42rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 0.66rem;
+  color: var(--text-soft);
+}
+
+.phoneRow b { color: var(--text); font-weight: 600; }
+
+.phoneRow em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--green);
+}
+
+/* Value ----------------------------------------------------------- */
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.valueCard {
+  display: grid;
+  align-content: start;
+  gap: 0.55rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(148, 180, 214, 0.05), rgba(148, 180, 214, 0.02));
+}
+
+.valueCard h3 { margin: 0; font-size: 1rem; color: var(--text); }
+
+.valueCard p { margin: 0; font-size: 0.88rem; line-height: 1.62; color: var(--text-soft); }
+
+.valueTag {
+  justify-self: start;
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid rgba(53, 208, 230, 0.32);
+  background: rgba(53, 208, 230, 0.07);
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+}
+
+.disclaimer {
+  margin: 1.4rem 0 0;
+  padding: 0.95rem 1.1rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: rgba(245, 194, 107, 0.06);
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+/* Pilot steps ----------------------------------------------------- */
+.steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+.pilotNote {
+  margin-top: 1.5rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(148, 180, 214, 0.04);
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+.pilotNote strong { color: var(--text); }
+
+.pilotNote p { margin: 0; }
+
+.pilotLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Trust ----------------------------------------------------------- */
+.trust {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.trustBody {
+  display: grid;
+  gap: 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: var(--text-soft);
+}
+
+.trustBody p { margin: 0; }
+
+.trustPanel {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(53, 208, 230, 0.045);
+}
+
+.trustPanel h3 { margin: 0 0 0.6rem; font-size: 0.92rem; color: var(--text); }
+
+.trustPanel ul {
+  margin: 0 0 1.1rem;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+/* Responsive ------------------------------------------------------ */
+@media (max-width: 900px) {
+  .previewGrid { grid-template-columns: minmax(0, 1fr); }
+  .trust { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .honestyGrid { grid-template-columns: minmax(0, 1fr); }
+  .valueGrid { grid-template-columns: minmax(0, 1fr); }
+  .heroActions { flex-direction: column; align-items: stretch; }
+}
