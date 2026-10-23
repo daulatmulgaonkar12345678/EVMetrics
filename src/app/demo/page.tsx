@@ -16,9 +16,9 @@ import {
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Product demo — interactive vehicle analytics preview',
+  title: 'Product demo — interactive multi-brand vehicle analytics preview',
   description:
-    'An interactive preview of the Evmetrik vehicle analytics platform: fleet overview, energy and fuel consumption, battery state of charge and health, utilisation and alerts across electric, petrol, diesel and hybrid vehicles. Every figure is illustrative sample data.',
+    'An interactive preview of the Evmetrik vehicle analytics platform for mixed-brand vehicles: fleet overview, energy and fuel consumption, battery state of charge and health, utilisation and alerts across electric, hybrid, petrol and diesel sample records. Every figure is illustrative sample data.',
   alternates: { canonical: '/demo/' },
   openGraph: {
     title: 'Evmetrik product demo — interactive vehicle analytics preview',
@@ -44,6 +44,11 @@ const DOES_NOT_SHOW = [
 ];
 
 const VALUE = [
+  {
+    title: 'Individual vehicle owners',
+    body:
+      'See how several supported vehicles from different manufacturers could sit in one account: pick a record, read what it reports, and move to the next vehicle without changing applications. The sample set deliberately mixes manufacturers and drivetrains so the difference between what an electric, hybrid, petrol or diesel vehicle reports is visible rather than glossed over.',
+  },
   {
     title: 'Fleet operators and fleet owners',
     body:
@@ -226,8 +231,8 @@ export default function DemoPage() {
           <SectionHeading
             id="value-title"
             eyebrow="Customer value"
-            title="Where analytics can help, by type of operator"
-            lede="These are the questions the platform is designed to support. They are potential benefits, not outcomes Evmetrik has measured or can promise."
+            title="How different customers would use this preview"
+            lede="The same surface answers different questions depending on who is looking at it. These are the questions the platform is designed to support — potential benefits, not outcomes Evmetrik has measured or can promise."
           />
           <div className={styles.valueGrid}>
             {VALUE.map((item) => (

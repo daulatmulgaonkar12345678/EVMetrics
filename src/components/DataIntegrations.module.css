@@ -1,0 +1,129 @@
+.sourceGrid {
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.tableTitle {
+  margin: clamp(2.25rem, 4vw, 3rem) 0 0.5rem;
+  font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+}
+
+.tableLede {
+  margin: 0 0 1.25rem;
+  max-width: 72ch;
+  color: var(--text-soft);
+  font-size: 0.96rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--line-strong);
+  white-space: nowrap;
+}
+
+.table tbody th,
+.table tbody td {
+  padding: 0.9rem 1rem;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-soft);
+  font-weight: 400;
+}
+
+.table tbody th {
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.mutedCell {
+  color: var(--text-dim) !important;
+}
+
+.privacy {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  margin-top: clamp(2.25rem, 4vw, 3rem);
+  padding: clamp(1.2rem, 2.6vw, 1.9rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.privacy h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.02rem;
+}
+
+.privacy p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--text-soft);
+}
+
+.privacy ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.privacy li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.privacy li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 2px;
+  background: var(--cyan);
+  opacity: 0.8;
+}
+
+.statusNote {
+  margin: 1.5rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  max-width: 80ch;
+}
+
+.statusNote strong {
+  color: var(--text-soft);
+}

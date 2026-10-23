@@ -12,7 +12,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Partner With Us — pilot process, FAQ and contact',
   description:
-    'How a pilot with Evmetrik works: scoping, authorization, sandbox integration, dashboard configuration and a pilot review. Plus answers to common questions and a contact form.',
+    'How a pilot with Evmetrik works for manufacturers, OEMs and fleet operators: scoping, authorisation, a sample integration, dashboard configuration and a pilot review. Plus answers to common questions and a contact form.',
 };
 
 const USER_TYPES = [
@@ -46,10 +46,12 @@ export default function PartnerPage() {
           <div className={styles.heroGrid}>
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>Product preview</p>
-              <h1>Turn EV data into clearer decisions.</h1>
+              <h1>Turn vehicle data into clearer decisions.</h1>
               <p className={styles.lede}>
-                Evmetrik helps electric two-wheeler manufacturers explore battery performance,
-                vehicle usage, charging behaviour and operational trends through structured analytics.
+                Evmetrik helps manufacturers, OEM engineering teams and fleet operators explore
+                battery performance, vehicle usage, charging or fuel behaviour and operational
+                trends through structured analytics — across supported vehicles from more than one
+                manufacturer.
               </p>
               <div className={styles.btnRow}>
                 <ButtonLink href="#contact">Request a Pilot</ButtonLink>
@@ -88,6 +90,45 @@ export default function PartnerPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section--alt" id="who" aria-labelledby="who-title">
+        <div className="container">
+          <SectionHeading
+            id="who-title"
+            eyebrow="Who a pilot is for"
+            title="Three kinds of partner, one scoped question"
+            lede="A pilot is a working session against data you already hold, not a sales evaluation. It suits organisations that can authorise access to their own vehicle records."
+          />
+          <div className={styles.userTypeGrid}>
+            <article className={styles.userTypeCard}>
+              <h3>Manufacturers and OEMs</h3>
+              <p>
+                Analyse authorised field data for your own models and variants: consumption under
+                real duty cycles, charging behaviour, recurring alerts and incomplete fields.
+              </p>
+            </article>
+            <article className={styles.userTypeCard}>
+              <h3>Fleet operators and logistics</h3>
+              <p>
+                Bring a mixed-brand fleet into one workspace for a single question — utilisation,
+                idle and non-reporting vehicles, depot comparison, or cost per kilometre.
+              </p>
+            </article>
+            <article className={styles.userTypeCard}>
+              <h3>EV and mobility businesses</h3>
+              <p>
+                Test whether the data behind a subscription, leasing or rental operation is rich
+                enough to support the reporting the business needs.
+              </p>
+            </article>
+          </div>
+          <p className={styles.sampleIntro}>
+            Individual-owner accounts are part of the intended product, but a founding pilot is
+            scoped at organisation level. If you are an individual owner, the product demo is the
+            place to see the intended owner experience.
+          </p>
         </div>
       </section>
 

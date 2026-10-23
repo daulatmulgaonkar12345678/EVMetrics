@@ -1,0 +1,113 @@
+.grid {
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.6rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  align-items: stretch;
+}
+
+/* When only two audiences are shown (reuse elsewhere), avoid a lone orphan card. */
+.grid[data-count='2'] {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: clamp(1.2rem, 2.4vw, 1.85rem);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+  opacity: 0.8;
+}
+
+.card[data-audience='fleets']::before {
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+}
+
+.card[data-audience='manufacturers']::before {
+  background: linear-gradient(90deg, var(--cyan-deep), var(--cyan));
+}
+
+.tag {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.summary {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.97rem;
+}
+
+.benefits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.9rem;
+}
+
+.benefits li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.93rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  background: transparent;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-dim);
+  border-left: 2px solid var(--line-strong);
+  padding-left: 0.75rem;
+}
+
+.linkRow {
+  margin: auto 0 0;
+  padding-top: 0.35rem;
+}
+
+@media (max-width: 640px) {
+  .summary,
+  .benefits li {
+    font-size: 0.95rem;
+  }
+}

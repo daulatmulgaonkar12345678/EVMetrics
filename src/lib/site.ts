@@ -12,5 +12,6 @@ export const SITE = {
   name: 'Evmetrik',
   domain: 'evmetrik.com',
   url: 'https://evmetrik.com',
-  tagline: 'Shared EV software and analytics for emerging electric two-wheeler manufacturers',
+  tagline:
+    'One analytics platform for supported vehicles from multiple manufacturers — owners, fleets and manufacturers',
 } as const;

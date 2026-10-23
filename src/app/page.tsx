@@ -5,14 +5,16 @@ import { FeatureCard } from '@/components/FeatureCard';
 import { StepCard } from '@/components/StepCard';
 import { CtaBanner } from '@/components/CtaBanner';
 import { ButtonLink } from '@/components/Button';
+import { AudienceSection } from '@/components/AudienceSection';
+import { UnifiedPlatform } from '@/components/UnifiedPlatform';
 import { FEATURES } from '@/data/features';
 import { HOME_STEPS } from '@/data/process';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Shared EV software and analytics for emerging manufacturers',
+  title: 'Vehicle analytics for mixed-brand fleets, manufacturers and owners',
   description:
-    'Evmetrik is a shared, tenant-isolated software and analytics platform for small and emerging electric two-wheeler manufacturers in India: per-brand dashboards, authorized data integrations, battery and charging analytics, running-cost reports and service insights.',
+    'Evmetrik brings available vehicle data from multiple manufacturers into one analytics experience: individuals managing several supported vehicles, fleet operators monitoring a mixed-brand fleet, and manufacturers analysing authorised field data. Per-brand workspaces, authorised integrations, battery and charging analytics, running-cost reports and service insights.',
 };
 
 const AUDIENCE = [
@@ -47,8 +49,8 @@ export default function HomePage() {
           <SectionHeading
             id="problem-title"
             eyebrow="The problem"
-            title="Every small EV manufacturer is building the same software"
-            lede="Dashboards, pipelines, cost spreadsheets and service trackers are rebuilt from scratch by each company, at a cost that small teams cannot absorb. The result is inconsistent numbers, slow decisions and expensive engineering time."
+            title="Vehicle data arrives in as many formats as there are manufacturers"
+            lede="Dashboards, pipelines, cost spreadsheets and service trackers get rebuilt from scratch by each company, at a cost small teams cannot absorb. A fleet running several brands, or an owner with three vehicles, has no single place to look — and the numbers that do exist rarely mean the same thing twice. Evmetrik is designed around one common data model instead."
           />
 
           <div className="grid grid--3">
@@ -81,8 +83,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             id="value-title"
-            eyebrow="What you get"
-            title="A shared platform, configured for your manufacturer"
+            eyebrow="Capabilities"
+            title="A shared platform, configured for your make and your models"
             lede="You bring the vehicles and the data you are willing to share. We bring the common stack, the metric definitions and the dashboards — configured to your brand, your models and your teams."
           />
           <div className="grid grid--3">
@@ -92,6 +94,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <AudienceSection
+        id="customer-value"
+        eyebrow="What you get with Evmetrik"
+        title="One platform, three very different jobs"
+        lede="An individual with two scooters and a car, a logistics operator with a mixed fleet, and a manufacturer investigating a field issue do not need the same screens. They do need the same underlying data discipline."
+      />
+
+      <UnifiedPlatform id="unified-platform" />
 
       <section className="section" aria-labelledby="how-title">
         <div className="container">
@@ -119,8 +130,9 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             id="audience-title"
-            eyebrow="Who it is for"
+            eyebrow="Manufacturer stages"
             title="Built for teams that cannot afford enterprise tooling"
+            lede="Separate from customer type, the platform is scoped for manufacturers at three stages — each with the same data discipline and a different starting module set."
           />
           <div className="grid grid--3">
             {AUDIENCE.map((item) => (

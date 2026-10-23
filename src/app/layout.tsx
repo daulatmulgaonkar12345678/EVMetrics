@@ -7,23 +7,25 @@ import { SITE } from '@/lib/site';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} - Shared EV software & analytics platform for manufacturers`,
+    default: `${SITE.name} - Vehicle analytics for mixed-brand fleets, manufacturers and owners`,
     template: `%s | ${SITE.name}`,
   },
   description:
-    'A shared software and analytics platform for small and emerging electric two-wheeler manufacturers in India: per-brand dashboards, authorized data integrations, battery and charging analytics, running-cost reports and service insights.',
+    'Evmetrik brings available vehicle data from multiple manufacturers into one analytics experience: dashboards for individuals running several supported vehicles, fleet operators monitoring a mixed-brand fleet, and manufacturers analysing authorised field data. Per-organisation workspaces, authorised integrations, battery and charging analytics, running-cost reports and service insights.',
   keywords: [
-    'EV analytics platform',
-    'electric two-wheeler manufacturer software',
+    'vehicle analytics platform',
+    'multi-brand fleet analytics',
+    'fleet management dashboard',
+    'EV and hybrid vehicle data',
     'battery analytics',
-    'telemetry integration',
-    'India EV startup',
+    'authorized telemetry integration',
+    'manufacturer field data',
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: `${SITE.name} - Shared EV software & analytics platform`,
+    title: `${SITE.name} - One platform for every supported vehicle`,
     description:
-      'Per-brand dashboards, authorized vehicle-data integrations, battery and charging analytics, running-cost reports and service insights for emerging EV manufacturers.',
+      'Manufacturer-independent dashboards, authorised vehicle-data integrations, battery and charging analytics, running-cost reports and service insights — for owners, fleets and manufacturers.',
     url: SITE.url,
     siteName: SITE.name,
     type: 'website',
@@ -31,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} - Shared EV software & analytics platform`,
+    title: `${SITE.name} - One platform for every supported vehicle`,
     description:
-      'Shared EV software and analytics for small and emerging electric two-wheeler manufacturers in India.',
+      'Available vehicle data from multiple manufacturers, in one analytics experience — for individual owners, mixed-brand fleets and manufacturers.',
   },
   robots: { index: true, follow: true },
 };

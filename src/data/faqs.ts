@@ -18,6 +18,18 @@ export const FAQS: Faq[] = [
     a: 'Pilot commercials are agreed per engagement, based on scope, vehicle count and the modules you adopt. We do not publish a price list, because the scope of a shared platform engagement varies considerably between manufacturers.',
   },
   {
+    q: 'Does Evmetrik work with vehicles from more than one manufacturer?',
+    a: 'That is the design intent. One analytical model is intended to hold supported vehicles regardless of brand, so a mixed fleet or a multi-vehicle household can be viewed in one workspace. Each manufacturer is still a separate integration: compatibility depends on the model, the fields its source exposes and the permissions granted, and no model is supported until an integration for it has been agreed.',
+  },
+  {
+    q: 'Where does the vehicle data come from?',
+    a: 'From whichever authorised source is available for that vehicle: the vehicle itself or an approved telematics device, a manufacturer or OEM API where one is provided, an existing fleet-management system with export or API access, or a historical file export. Data does not have to pass through a manufacturer database first, and some integrations will not be possible at all — that is assessed per vehicle during scoping.',
+  },
+  {
+    q: 'Can an individual owner use it, or is it only for companies?',
+    a: 'Individual owner accounts are part of the intended product: several supported vehicles in one account, with access limited to the vehicles associated with that account, kept separate from any company workspace. Evmetrik is pre-launch, so there is no self-service sign-up today. The product demo shows the intended owner experience using fictional sample records, and organisations can apply for a pilot.',
+  },
+  {
     q: 'Are the analytics validated or clinically proven?',
     a: 'No. This is operational analytics software, not a validated medical or safety-certified diagnostic system. Battery and cost outputs are derived from the telemetry your vehicles report, and every dashboard distinguishes measured, derived and estimated values. Any conclusion about hardware health needs to be confirmed against your own engineering and test data.',
   },

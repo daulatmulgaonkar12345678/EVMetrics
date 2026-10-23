@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { SectionHeading } from '@/components/SectionHeading';
 import { FeatureCard } from '@/components/FeatureCard';
 import { ArchitectureDiagram } from '@/components/ArchitectureDiagram';
+import { DataIntegrations } from '@/components/DataIntegrations';
 import { SampleDashboard } from '@/components/SampleDashboard';
 import { CtaBanner } from '@/components/CtaBanner';
 import { ButtonLink } from '@/components/Button';
@@ -9,9 +10,9 @@ import { FEATURES } from '@/data/features';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Platform — features, architecture and an illustrative dashboard',
+  title: 'Platform — capabilities, integrations, architecture and an illustrative dashboard',
   description:
-    'The Evmetrik platform: per-brand dashboards, authorized data integrations, battery and charging analytics, running-cost reports, service insights, a logical architecture overview and an illustrative dashboard using fictional sample data.',
+    'The Evmetrik platform: manufacturer-independent dashboards for mixed-brand vehicle data, authorised integrations, metrics by drivetrain, battery and charging analytics, running-cost reports, service insights and a logical architecture overview.',
 };
 
 const MODULES = [
@@ -72,14 +73,16 @@ export default function PlatformPage() {
       <section className={styles.hero}>
         <div className="container">
           <p className="eyebrow">The platform</p>
-          <h1>One stack, six modules, one tenant per manufacturer</h1>
+          <h1>One stack, six modules, one workspace per organisation</h1>
           <p className="lede">
-            The platform is built as a common foundation with optional modules, so a new
-            manufacturer can start with dashboards and add battery, cost and service
-            analytics when their data and team are ready.
+            The platform is built as a common foundation with optional modules, so an organisation
+            can start with dashboards and add battery, cost and service analytics when their data
+            and team are ready. The same foundation is designed to hold supported vehicles from
+            different manufacturers in one analytical model.
           </p>
           <div className={styles.badges}>
-            <span className="badge">Per-brand workspaces</span>
+            <span className="badge">Manufacturer-independent</span>
+            <span className="badge">Workspaces per organisation</span>
             <span className="badge">Authorized ingestion</span>
             <span className="badge">No database required on your side</span>
             <span className="badge">Pre-launch — pilots now</span>
@@ -150,6 +153,8 @@ export default function PlatformPage() {
           </p>
         </div>
       </section>
+
+      <DataIntegrations id="integrations" />
 
       <section className="section section--panel" aria-labelledby="dashboard-title">
         <div className="container">

@@ -1,0 +1,109 @@
+.wrap {
+  background: rgba(9, 17, 30, 0.72);
+  border-block: 1px solid var(--line);
+}
+
+.steps {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  margin: 0 0 clamp(1.4rem, 3vw, 2rem);
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  padding: clamp(1.1rem, 2.2vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.stepLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+
+.step h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--text-soft);
+}
+
+.compatibility {
+  margin: 0 0 clamp(2rem, 4vw, 2.75rem);
+  max-width: 78ch;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  border-left: 2px solid var(--cyan-deep);
+  padding-left: 0.9rem;
+}
+
+.compatibility strong {
+  color: var(--text-soft);
+}
+
+.compare {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+}
+
+.compareCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: clamp(1.1rem, 2.2vw, 1.5rem);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.compareLabel {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.compareCard h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.compareBody {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--text-soft);
+}
+
+.compareLink {
+  margin-top: auto;
+  padding-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.compareLink:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  margin-top: clamp(1.6rem, 3vw, 2.25rem);
+}
